@@ -4,7 +4,7 @@ import SideBarItem from './SideBarItem';
 
 export default function SideBar() {
   return (
-    <aside className="flex flex-col">
+    <aside className="flex flex-col dark:bg-gray-900 dark:text-gray-200">
       <div
         className={`flex flex-col items-center justify-center h-20 w-20 bg-gradient-to-r from-indigo-500 to-purple-800`}
       >
@@ -20,7 +20,11 @@ export default function SideBar() {
           icon={Logout}
           text="Sair"
           onClick={() => console.log('saiu')}
-          className="hover:bg-red-500 hover:text-white text-red-500"
+          className="
+            dark:text-red-400 
+            dark:text-white 
+            hover:bg-red-500 hover:text-white 
+            text-red-600"
         />
       </ul>
     </aside>
