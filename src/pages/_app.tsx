@@ -1,3 +1,4 @@
+import { AppProvider } from '@/data/context/AppContext';
 import '@/styles/globals.css';
 
 import type { AppProps } from 'next/app';
@@ -10,8 +11,10 @@ const roboto = Rubik({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={roboto.className}>
-      <Component {...pageProps} />
-    </main>
+    <AppProvider>
+      <main className={roboto.className}>
+        <Component {...pageProps} />
+      </main>
+    </AppProvider>
   );
 }
